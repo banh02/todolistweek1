@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Form Đăng ký -->
+        <div class="form-wrapper" id="register-form">
+            <h2>Đăng ký</h2>
+            <form action="process.php" method="POST" onsubmit="showLoginForm(event)">
+                <input type="hidden" name="action" value="register">
+                <label for="reg_username">Tên đăng nhập:</label>
+                <input type="text" id="reg_username" name="username" required>
+                <label for="reg_password">Mật khẩu:</label>
+                <input type="password" id="reg_password" name="password" required>
+                <button type="submit" class="btn">Đăng ký</button>
+            </form>
+        </div>
+
+        <!-- Form Đăng nhập -->
+        <div class="form-wrapper hidden" id="login-form">
+            <h2>Đăng nhập</h2>
+            <form action="process.php" method="POST">
+                <input type="hidden" name="action" value="login">
+                <label for="login_username">Tên đăng nhập:</label>
+                <input type="text" id="login_username" name="username" required>
+                <label for="login_password">Mật khẩu:</label>
+                <input type="password" id="login_password" name="password" required>
+                <button type="submit" class="btn">Đăng nhập</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
